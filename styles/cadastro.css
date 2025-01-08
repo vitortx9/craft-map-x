@@ -1,0 +1,187 @@
+/* Reset básico para remover margens e padding padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores básicas */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+    color: #191717;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+    color: #191717;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Container do formulário */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.container.slide-out {
+    animation: slideOut 0.5s ease-out forwards;
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 17px;
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Botão de submit */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#data_aniversario {
+    border: 2px solid #b5b5b5;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#data_aniversario:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+    background-color: #fff;
+}
+
+label[type="date"] {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+/* titulos*/
+h1 {
+    color: #191717;
+    margin-bottom: 10px;
+    font-size: 2.0em;
+    margin: 20px 0;
+}
+
+/* letras*/
+p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* link */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #191717;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilização adicional para mensagens de aviso */
+p b {
+    color: #ff0000;
+}
+
+/* Estilo da mensagem de erro */
+.error {
+    color: red;
+    margin-bottom: 15px;
+}
